@@ -5,12 +5,15 @@
         <v-btn color="primary" to="/search">検索する</v-btn>
       </v-col>
     </v-row>
-    <v-row>
+    <div>
+      <h1>My BookLists</h1>
+    </div>
+    <v-row class="booklist">
       <v-col cols="12" sm="6" v-for="book in books" :key="book.id">
-        <v-card>
+        <v-card class="book">
           <v-row>
             <v-col cols="4">
-              <v-img :src="book.image"></v-img>
+              <v-img max-height="200" max-width="300" :src="book.image"></v-img>
             </v-col>
             <v-col cols="8">
               <v-card-title>{{ book.title }}</v-card-title>
@@ -43,4 +46,20 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+h1 {
+  font-family: "Playfair Display", serif;
+  width: 196px;
+  margin: 20px auto;
+}
+
+.book {
+  max-height: 250px;
+  min-height: 250px;
+}
+
+.booklist {
+  min-height: 300px;
+  margin-top: 50px;
+}
+</style>

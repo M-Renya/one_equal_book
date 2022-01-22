@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-app-bar app color="primary" dark>
-      <v-spacer></v-spacer>
+    <v-app-bar app color="secondary" dark>
+      <v-spacer>ONE Equal</v-spacer>
       <v-btn color="error" @click="deleteLocalStorage"> 削除する </v-btn>
     </v-app-bar>
   </div>
@@ -18,4 +18,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
+.spacer {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+}
+</style>

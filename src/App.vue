@@ -10,13 +10,13 @@
         />
       </v-container>
     </v-main>
-    <Footer />
+    <!-- <Footer /> -->
   </v-app>
 </template>
 
 <script>
 import Header from "@/global/Header";
-import Footer from "@/global/Footer";
+// import Footer from "@/global/Footer";
 const STORAGE_KEY = "books";
 
 export default {
@@ -24,7 +24,7 @@ export default {
 
   components: {
     Header,
-    Footer,
+    // Footer,
   },
 
   data() {
@@ -94,3 +94,9 @@ export default {
   },
 };
 </script>
+
+<style>
+main {
+  background: rgb(189, 189, 189);
+}
+</style>

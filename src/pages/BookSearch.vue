@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="class">
     <v-row>
       <v-col cols="6">
         <v-text-field label="本のタイトルを検索" v-model="keyword">
@@ -21,10 +21,10 @@
         v-for="(book, index) in searchResults"
         :key="book.index"
       >
-        <v-card class="mx-auto">
+        <v-card class="book search_books mx-auto">
           <v-row>
             <v-col cols="4">
-              <v-img :src="book.image"></v-img>
+              <v-img max-height="200" max-width="300" :src="book.image"></v-img>
             </v-col>
             <v-col cols="8">
               <v-card-title>{{ book.title }}</v-card-title>
@@ -88,4 +88,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.class {
+  margin-top: 100px;
+}
+
+.search_books {
+  margin-top: 50px;
+}
+</style>

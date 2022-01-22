@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="class">
     <v-row>
       <v-col cols="12">
-        <v-card class="mx-auto">
+        <v-card max-height="1000" max-width="1000" class="mx-auto">
           <v-row>
             <v-col cols="4">
-              <v-img :src="book.image"></v-img>
+              <v-img max-height="400" max-width="300" :src="book.image"></v-img>
             </v-col>
             <v-col cols="8">
               <v-card-title> タイトル：{{ book.title }} </v-card-title>
@@ -89,4 +89,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.class {
+  margin-top: 100px;
+}
+</style>
